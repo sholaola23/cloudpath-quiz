@@ -1,0 +1,495 @@
+{
+  "results": [
+    {
+      "path": "SA",
+      "title": "Solutions Architect",
+      "archetype": "The Big Picture Thinker",
+      "emoji": "\ud83c\udfd7\ufe0f",
+      "accent_colour": "#3B82F6",
+      "description": "You see systems, not just servers. While everyone else is zoomed in on one piece of the puzzle, you're the one asking \"but how does it all fit together?\" \u2014 and then drawing the diagram that makes it click for everyone in the room.\n\nSolutions Architects design cloud systems that are reliable, scalable, and cost-effective. You're the bridge between what the business needs and what the technology can do. You don't just build \u2014 you design. And then you explain your design so well that everyone from the CTO to the junior dev understands why it works.",
+      "day_in_the_life": [
+        "Morning: Review a client's current infrastructure and sketch out a migration plan to AWS/Azure/GCP",
+        "Late morning: Lead a design workshop with the dev team, whiteboarding the architecture for a new microservices platform",
+        "Afternoon: Write a Well-Architected Review \u2014 assessing security, cost, reliability, and performance",
+        "End of day: Present your architecture to senior stakeholders, fielding questions and refining the design"
+      ],
+      "salary_ranges": [
+        { "level": "Junior/Associate", "uk_gbp": "\u00a345,000 - \u00a365,000", "us_usd": "$90,000 - $120,000", "remote_global": "$60,000 - $100,000" },
+        { "level": "Mid-level", "uk_gbp": "\u00a370,000 - \u00a395,000", "us_usd": "$120,000 - $160,000", "remote_global": "$80,000 - $130,000" },
+        { "level": "Senior/Principal", "uk_gbp": "\u00a3100,000 - \u00a3150,000+", "us_usd": "$160,000 - $220,000+", "remote_global": "$120,000 - $180,000" }
+      ],
+      "certifications": [
+        {
+          "route": "beginner",
+          "description": "No cloud experience",
+          "first_cert": {
+            "name": "AWS Cloud Practitioner",
+            "code": "CLF-C02",
+            "provider": "AWS",
+            "study_weeks": 4,
+            "exam_cost_usd": 100,
+            "why": "Gives you the cloud vocabulary and foundational understanding every SA needs"
+          },
+          "second_cert": {
+            "name": "AWS Solutions Architect Associate",
+            "code": "SAA-C03",
+            "provider": "AWS",
+            "study_weeks": 8,
+            "exam_cost_usd": 150,
+            "why": "The industry-standard SA credential \u2014 this is what hiring managers look for first"
+          }
+        },
+        {
+          "route": "accelerated",
+          "description": "Some IT/cloud exposure",
+          "first_cert": {
+            "name": "AWS Solutions Architect Associate",
+            "code": "SAA-C03",
+            "provider": "AWS",
+            "study_weeks": 6,
+            "exam_cost_usd": 150,
+            "why": "Skip the basics \u2014 you already have the fundamentals, go straight to the SA credential"
+          },
+          "second_cert": {
+            "name": "AWS Solutions Architect Professional",
+            "code": "SAP-C02",
+            "provider": "AWS",
+            "study_weeks": 12,
+            "exam_cost_usd": 300,
+            "why": "The gold standard \u2014 this cert separates senior SAs from the rest"
+          }
+        }
+      ],
+      "skills": [
+        "Cloud architecture patterns (well-architected frameworks)",
+        "Diagramming and technical documentation (Lucidchart, draw.io)",
+        "Networking fundamentals (VPCs, subnets, DNS, load balancing)",
+        "Cost optimisation and FinOps basics",
+        "Stakeholder communication and technical storytelling"
+      ],
+      "sholas_take": "I'm a Solutions Architect at AWS, so I'm biased \u2014 but I genuinely think this is one of the most rewarding roles in cloud. You get to think big, solve complex problems, AND talk to people. It's the role where non-tech backgrounds are actually an advantage. My economics degree? Turns out understanding business value is half the job. If you got this result, you've got the right brain for it.",
+      "cta_primary": {
+        "text": "Download the AWS Certification Roadmap 2026",
+        "url": "https://sholastechnotes.com/aws-certification-roadmap",
+        "utm_params": { "utm_source": "cloudpath-quiz", "utm_medium": "result-page", "utm_campaign": "cert-roadmap", "utm_content": "sa" }
+      },
+      "cta_secondary": {
+        "text": "Subscribe to Shola's Tech Notes",
+        "url": "https://sholastechnotes.com",
+        "utm_params": { "utm_source": "cloudpath-quiz", "utm_medium": "result-page", "utm_campaign": "newsletter", "utm_content": "sa" }
+      },
+      "share_text": "I took the CloudPath Quiz and got Solutions Architect \u2014 The Big Picture Thinker! Which cloud career fits you?",
+      "og_description": "Your CloudPath result: Solutions Architect. Design cloud systems, bridge business and technology, and earn \u00a345K-\u00a3150K+."
+    },
+    {
+      "path": "CE",
+      "title": "Cloud/DevOps Engineer",
+      "archetype": "The Builder",
+      "emoji": "\u2699\ufe0f",
+      "accent_colour": "#10B981",
+      "description": "You don't want to draw the diagram \u2014 you want to build the thing. Cloud and DevOps Engineers are the people who make infrastructure actually work. While the architect designs it, you deploy it, automate it, and make sure it runs at 2am without anyone having to wake up.\n\nYou love the terminal. You love automation. You love that satisfying feeling of watching a deployment pipeline run green from commit to production. If \"infrastructure as code\" sounds exciting rather than boring, this is your path.",
+      "day_in_the_life": [
+        "Morning: Write Terraform modules to provision a new Kubernetes cluster",
+        "Mid-morning: Debug a failing CI/CD pipeline \u2014 find the issue, fix it, push the fix",
+        "Afternoon: Automate a manual deployment process that's been annoying the team for months",
+        "Late afternoon: Review a pull request for infrastructure changes, pair with a junior engineer"
+      ],
+      "salary_ranges": [
+        { "level": "Junior", "uk_gbp": "\u00a335,000 - \u00a350,000", "us_usd": "$75,000 - $100,000", "remote_global": "$50,000 - $80,000" },
+        { "level": "Mid-level", "uk_gbp": "\u00a355,000 - \u00a380,000", "us_usd": "$100,000 - $140,000", "remote_global": "$70,000 - $110,000" },
+        { "level": "Senior", "uk_gbp": "\u00a380,000 - \u00a3110,000", "us_usd": "$140,000 - $180,000", "remote_global": "$100,000 - $150,000" },
+        { "level": "Principal/Staff", "uk_gbp": "\u00a3110,000 - \u00a3140,000+", "us_usd": "$180,000 - $220,000+", "remote_global": "$130,000 - $180,000" }
+      ],
+      "certifications": [
+        {
+          "route": "beginner",
+          "description": "New to cloud",
+          "first_cert": {
+            "name": "AWS Cloud Practitioner",
+            "code": "CLF-C02",
+            "provider": "AWS",
+            "study_weeks": 4,
+            "exam_cost_usd": 100,
+            "why": "Builds your cloud foundations before diving into the engineering side"
+          },
+          "second_cert": {
+            "name": "AWS SysOps Administrator Associate",
+            "code": "SOA-C02",
+            "provider": "AWS",
+            "study_weeks": 8,
+            "exam_cost_usd": 150,
+            "why": "Hands-on operational skills \u2014 the bread and butter of cloud engineering"
+          }
+        },
+        {
+          "route": "accelerated",
+          "description": "Already have IT/sysadmin experience",
+          "first_cert": {
+            "name": "AWS SysOps Administrator Associate",
+            "code": "SOA-C02",
+            "provider": "AWS",
+            "study_weeks": 6,
+            "exam_cost_usd": 150,
+            "why": "Your sysadmin experience translates directly \u2014 skip the basics and go operational"
+          },
+          "second_cert": {
+            "name": "AWS DevOps Engineer Professional",
+            "code": "DOP-C02",
+            "provider": "AWS",
+            "study_weeks": 12,
+            "exam_cost_usd": 300,
+            "why": "The professional-level DevOps cert \u2014 proves you can design and manage CI/CD at scale"
+          }
+        }
+      ],
+      "skills": [
+        "Infrastructure as Code (Terraform, CloudFormation, or Pulumi)",
+        "CI/CD pipelines (GitHub Actions, GitLab CI, Jenkins)",
+        "Containers and orchestration (Docker, Kubernetes, EKS/ECS)",
+        "Linux administration and shell scripting (Bash, Python)",
+        "Monitoring and observability (CloudWatch, Prometheus, Grafana)"
+      ],
+      "sholas_take": "DevOps Engineers are the most in-demand cloud role in the UK right now. Every company needs someone who can automate their infrastructure. What I love about this path is that you see results fast \u2014 you build something, it works (or it doesn't, and you fix it), and there's no ambiguity about whether you're adding value. If you like building things with your hands, this is the cloud equivalent.",
+      "cta_primary": {
+        "text": "Download the AWS Certification Roadmap 2026",
+        "url": "https://sholastechnotes.com/aws-certification-roadmap",
+        "utm_params": { "utm_source": "cloudpath-quiz", "utm_medium": "result-page", "utm_campaign": "cert-roadmap", "utm_content": "ce" }
+      },
+      "cta_secondary": {
+        "text": "Subscribe to Shola's Tech Notes",
+        "url": "https://sholastechnotes.com",
+        "utm_params": { "utm_source": "cloudpath-quiz", "utm_medium": "result-page", "utm_campaign": "newsletter", "utm_content": "ce" }
+      },
+      "share_text": "I took the CloudPath Quiz and got Cloud/DevOps Engineer \u2014 The Builder! Which cloud career fits you?",
+      "og_description": "Your CloudPath result: Cloud/DevOps Engineer. Build infrastructure, automate everything, and earn \u00a335K-\u00a3140K+."
+    },
+    {
+      "path": "SEC",
+      "title": "Cloud Security Specialist",
+      "archetype": "The Guardian",
+      "emoji": "\ud83d\udee1\ufe0f",
+      "accent_colour": "#EF4444",
+      "description": "You're the person who sees risk where others see features. While everyone else is rushing to ship, you're the one asking \"but is it secure?\" \u2014 and you're right to ask, because breaches cost companies millions and careers.\n\nCloud Security Specialists protect cloud environments from threats, design secure architectures, and make sure companies meet compliance requirements. It's a role where attention to detail isn't just nice to have \u2014 it's the entire job. And demand for this skill? Through the roof.",
+      "day_in_the_life": [
+        "Morning: Run a security assessment on a client's AWS account \u2014 IAM policies, encryption, network exposure",
+        "Mid-morning: Review CloudTrail logs to investigate suspicious activity flagged overnight",
+        "Afternoon: Design a zero-trust network architecture for a financial services client",
+        "Late afternoon: Write a security findings report and present remediation priorities to the engineering team"
+      ],
+      "salary_ranges": [
+        { "level": "Junior", "uk_gbp": "\u00a340,000 - \u00a355,000", "us_usd": "$80,000 - $110,000", "remote_global": "$55,000 - $85,000" },
+        { "level": "Mid-level", "uk_gbp": "\u00a360,000 - \u00a390,000", "us_usd": "$110,000 - $150,000", "remote_global": "$80,000 - $120,000" },
+        { "level": "Senior", "uk_gbp": "\u00a390,000 - \u00a3120,000", "us_usd": "$150,000 - $200,000", "remote_global": "$110,000 - $160,000" },
+        { "level": "Head / CISO track", "uk_gbp": "\u00a3120,000 - \u00a3180,000+", "us_usd": "$200,000 - $300,000+", "remote_global": "$150,000 - $250,000" }
+      ],
+      "certifications": [
+        {
+          "route": "beginner",
+          "description": "No security background",
+          "first_cert": {
+            "name": "CompTIA Security+",
+            "code": "SY0-701",
+            "provider": "CompTIA",
+            "study_weeks": 6,
+            "exam_cost_usd": 404,
+            "why": "The foundational security cert \u2014 gives you the security vocabulary and concepts before specialising in cloud"
+          },
+          "second_cert": {
+            "name": "AWS Solutions Architect Associate",
+            "code": "SAA-C03",
+            "provider": "AWS",
+            "study_weeks": 8,
+            "exam_cost_usd": 150,
+            "why": "Security needs architectural context first \u2014 you need to understand what you're protecting"
+          }
+        },
+        {
+          "route": "accelerated",
+          "description": "Audit/compliance/IT security background",
+          "first_cert": {
+            "name": "AWS Security Specialty",
+            "code": "SCS-C02",
+            "provider": "AWS",
+            "study_weeks": 8,
+            "exam_cost_usd": 300,
+            "why": "Your security fundamentals are solid \u2014 go straight to the cloud security specialisation"
+          },
+          "second_cert": {
+            "name": "CCSP (Certified Cloud Security Professional)",
+            "code": "CCSP",
+            "provider": "ISC2",
+            "study_weeks": 12,
+            "exam_cost_usd": 599,
+            "why": "The gold standard for cloud security \u2014 vendor-neutral and globally recognised"
+          }
+        }
+      ],
+      "skills": [
+        "Identity and Access Management (IAM policies, least privilege, federation)",
+        "Encryption and key management (KMS, TLS, at-rest/in-transit)",
+        "Compliance frameworks (ISO 27001, SOC 2, GDPR, PCI-DSS)",
+        "Threat detection and incident response (GuardDuty, Security Hub, SIEM tools)",
+        "Network security (firewalls, WAFs, VPC security groups, NACLs)"
+      ],
+      "sholas_take": "Security specialists are the most recession-proof people in cloud. Every breach that makes the news creates more demand for what you do. I work with security architects at AWS regularly, and what strikes me is that many of them came from non-traditional backgrounds \u2014 audit, compliance, risk management, even military. If you're naturally cautious and detail-oriented, those are superpowers in this role, not weaknesses.",
+      "cta_primary": {
+        "text": "Download the AWS Certification Roadmap 2026",
+        "url": "https://sholastechnotes.com/aws-certification-roadmap",
+        "utm_params": { "utm_source": "cloudpath-quiz", "utm_medium": "result-page", "utm_campaign": "cert-roadmap", "utm_content": "sec" }
+      },
+      "cta_secondary": {
+        "text": "Subscribe to Shola's Tech Notes",
+        "url": "https://sholastechnotes.com",
+        "utm_params": { "utm_source": "cloudpath-quiz", "utm_medium": "result-page", "utm_campaign": "newsletter", "utm_content": "sec" }
+      },
+      "share_text": "I took the CloudPath Quiz and got Cloud Security Specialist \u2014 The Guardian! Which cloud career fits you?",
+      "og_description": "Your CloudPath result: Cloud Security Specialist. Protect cloud environments, design secure architectures, and earn \u00a340K-\u00a3180K+."
+    },
+    {
+      "path": "DML",
+      "title": "Data/ML Engineer",
+      "archetype": "The Pattern Finder",
+      "emoji": "\ud83d\udcca",
+      "accent_colour": "#8B5CF6",
+      "description": "You see data where others see chaos. Give you a messy dataset and you'll clean it, transform it, pipe it somewhere useful, and build a dashboard that makes the CEO say \"oh, NOW I get it.\" Give you a bigger dataset and you'll train a model on it.\n\nCloud Data and ML Engineers build the pipelines and systems that turn raw data into business intelligence \u2014 and increasingly, into AI/ML models that make predictions, recommendations, and automated decisions. You're the person who makes data actually useful.",
+      "day_in_the_life": [
+        "Morning: Build an ETL pipeline using AWS Glue to process millions of records from an IoT platform",
+        "Mid-morning: Optimise a Redshift query that's been running too slowly for the analytics team",
+        "Afternoon: Train and evaluate a machine learning model in SageMaker for customer churn prediction",
+        "Late afternoon: Review data quality metrics and set up automated alerts for pipeline failures"
+      ],
+      "salary_ranges": [
+        { "level": "Junior", "uk_gbp": "\u00a335,000 - \u00a350,000", "us_usd": "$80,000 - $110,000", "remote_global": "$50,000 - $85,000" },
+        { "level": "Mid-level", "uk_gbp": "\u00a355,000 - \u00a385,000", "us_usd": "$110,000 - $150,000", "remote_global": "$75,000 - $120,000" },
+        { "level": "Senior", "uk_gbp": "\u00a385,000 - \u00a3120,000", "us_usd": "$150,000 - $200,000", "remote_global": "$110,000 - $160,000" },
+        { "level": "Principal / ML Lead", "uk_gbp": "\u00a3120,000 - \u00a3160,000+", "us_usd": "$200,000 - $280,000+", "remote_global": "$140,000 - $220,000" }
+      ],
+      "certifications": [
+        {
+          "route": "beginner",
+          "description": "New to cloud and data engineering",
+          "first_cert": {
+            "name": "AWS Cloud Practitioner",
+            "code": "CLF-C02",
+            "provider": "AWS",
+            "study_weeks": 4,
+            "exam_cost_usd": 100,
+            "why": "Get your cloud foundations before diving into the data services"
+          },
+          "second_cert": {
+            "name": "AWS Data Engineer Associate",
+            "code": "DEA-C01",
+            "provider": "AWS",
+            "study_weeks": 8,
+            "exam_cost_usd": 150,
+            "why": "New cert, directly relevant \u2014 covers the full data engineering lifecycle on AWS"
+          }
+        },
+        {
+          "route": "accelerated",
+          "description": "Already have data/analytics experience",
+          "first_cert": {
+            "name": "AWS Data Engineer Associate",
+            "code": "DEA-C01",
+            "provider": "AWS",
+            "study_weeks": 6,
+            "exam_cost_usd": 150,
+            "why": "Your data skills transfer directly \u2014 learn the AWS-specific services and patterns"
+          },
+          "second_cert": {
+            "name": "AWS Machine Learning Engineer Associate",
+            "code": "MLA-C01",
+            "provider": "AWS",
+            "study_weeks": 10,
+            "exam_cost_usd": 150,
+            "why": "Bridges the gap from data engineering to ML \u2014 the fastest-growing specialisation"
+          }
+        }
+      ],
+      "skills": [
+        "Python and SQL (non-negotiable \u2014 your daily tools)",
+        "Data pipeline frameworks (Apache Spark, Glue, Airflow, dbt)",
+        "Data warehousing (Redshift, BigQuery, Snowflake)",
+        "ML fundamentals (SageMaker, model training, feature engineering)",
+        "Data governance and quality (cataloguing, lineage, testing)"
+      ],
+      "sholas_take": "This is the path that's growing fastest right now. Every company wants AI, and AI needs data. But here's the thing nobody tells you \u2014 most of the work isn't the sexy model-building bit. It's building reliable pipelines that get the right data to the right place at the right time. If you've got a data or analytics background, you're already halfway there. The cloud bit is learnable. The data intuition? That's the hard part, and you've already got it.",
+      "cta_primary": {
+        "text": "Download the AWS Certification Roadmap 2026",
+        "url": "https://sholastechnotes.com/aws-certification-roadmap",
+        "utm_params": { "utm_source": "cloudpath-quiz", "utm_medium": "result-page", "utm_campaign": "cert-roadmap", "utm_content": "dml" }
+      },
+      "cta_secondary": {
+        "text": "Subscribe to Shola's Tech Notes",
+        "url": "https://sholastechnotes.com",
+        "utm_params": { "utm_source": "cloudpath-quiz", "utm_medium": "result-page", "utm_campaign": "newsletter", "utm_content": "dml" }
+      },
+      "share_text": "I took the CloudPath Quiz and got Data/ML Engineer \u2014 The Pattern Finder! Which cloud career fits you?",
+      "og_description": "Your CloudPath result: Data/ML Engineer. Build data pipelines, train ML models, and earn \u00a335K-\u00a3160K+."
+    },
+    {
+      "path": "SRE",
+      "title": "Platform/SRE Engineer",
+      "archetype": "The Optimizer",
+      "emoji": "\u2699\ufe0f",
+      "accent_colour": "#F59E0B",
+      "description": "You're the reason things don't break. Or when they do break, you're the reason they come back in seconds, not hours. Platform and SRE Engineers build the internal platforms that other engineers use, and make sure production systems are reliable, fast, and cost-effective.\n\nYou love systems thinking. You love automation. You get genuine satisfaction from reducing a deployment time from 45 minutes to 3 minutes, or cutting a cloud bill by 40% without anyone noticing a performance difference. Quiet excellence is your thing.",
+      "day_in_the_life": [
+        "Morning: Review overnight alerts and incident reports \u2014 triage anything that needs immediate attention",
+        "Mid-morning: Improve the internal developer platform \u2014 better self-service tooling, faster environments",
+        "Afternoon: Run a chaos engineering experiment to test how the system handles a database failover",
+        "Late afternoon: Analyse cloud spend reports and identify optimisation opportunities (right-sizing, reserved instances)"
+      ],
+      "salary_ranges": [
+        { "level": "Junior", "uk_gbp": "\u00a340,000 - \u00a355,000", "us_usd": "$85,000 - $115,000", "remote_global": "$55,000 - $90,000" },
+        { "level": "Mid-level", "uk_gbp": "\u00a360,000 - \u00a390,000", "us_usd": "$115,000 - $160,000", "remote_global": "$80,000 - $130,000" },
+        { "level": "Senior", "uk_gbp": "\u00a390,000 - \u00a3130,000", "us_usd": "$160,000 - $220,000", "remote_global": "$120,000 - $170,000" },
+        { "level": "Staff/Principal", "uk_gbp": "\u00a3130,000 - \u00a3170,000+", "us_usd": "$220,000 - $300,000+ (Big Tech)", "remote_global": "$150,000 - $230,000" }
+      ],
+      "certifications": [
+        {
+          "route": "beginner",
+          "description": "New to cloud and operations",
+          "first_cert": {
+            "name": "AWS Cloud Practitioner",
+            "code": "CLF-C02",
+            "provider": "AWS",
+            "study_weeks": 4,
+            "exam_cost_usd": 100,
+            "why": "Build your cloud foundations before diving into operational tooling"
+          },
+          "second_cert": {
+            "name": "AWS SysOps Administrator Associate",
+            "code": "SOA-C02",
+            "provider": "AWS",
+            "study_weeks": 8,
+            "exam_cost_usd": 150,
+            "why": "Operational focus \u2014 monitoring, deployment, and troubleshooting on AWS"
+          }
+        },
+        {
+          "route": "accelerated",
+          "description": "Already have sysadmin/ops experience",
+          "first_cert": {
+            "name": "AWS SysOps Administrator Associate",
+            "code": "SOA-C02",
+            "provider": "AWS",
+            "study_weeks": 6,
+            "exam_cost_usd": 150,
+            "why": "Your ops experience translates directly \u2014 learn the AWS-specific tooling"
+          },
+          "second_cert": {
+            "name": "Certified Kubernetes Administrator",
+            "code": "CKA",
+            "provider": "CNCF",
+            "study_weeks": 10,
+            "exam_cost_usd": 395,
+            "why": "The de facto platform engineering credential \u2014 Kubernetes is everywhere"
+          }
+        }
+      ],
+      "skills": [
+        "Observability stack (Prometheus, Grafana, OpenTelemetry, CloudWatch)",
+        "Kubernetes and container orchestration (EKS, GKE, AKS)",
+        "Incident management and on-call practices (PagerDuty, runbooks, blameless post-mortems)",
+        "Automation and scripting (Python, Bash, Go)",
+        "FinOps and cost optimisation (AWS Cost Explorer, Spot instances, right-sizing)"
+      ],
+      "sholas_take": "SRE and Platform Engineering are the unsung heroes of cloud. You won't get the flashy LinkedIn posts, but you'll get the respect of every developer who depends on your platform \u2014 and the salary to match. What I love about this role is that it rewards deep systems thinking. If you're the person who can't sleep knowing something's inefficient, this is where you belong. Also, SREs at Big Tech companies are some of the highest-paid engineers. Just saying.",
+      "cta_primary": {
+        "text": "Download the AWS Certification Roadmap 2026",
+        "url": "https://sholastechnotes.com/aws-certification-roadmap",
+        "utm_params": { "utm_source": "cloudpath-quiz", "utm_medium": "result-page", "utm_campaign": "cert-roadmap", "utm_content": "sre" }
+      },
+      "cta_secondary": {
+        "text": "Subscribe to Shola's Tech Notes",
+        "url": "https://sholastechnotes.com",
+        "utm_params": { "utm_source": "cloudpath-quiz", "utm_medium": "result-page", "utm_campaign": "newsletter", "utm_content": "sre" }
+      },
+      "share_text": "I took the CloudPath Quiz and got Platform/SRE Engineer \u2014 The Optimizer! Which cloud career fits you?",
+      "og_description": "Your CloudPath result: Platform/SRE Engineer. Build reliable platforms, optimise systems, and earn \u00a340K-\u00a3170K+."
+    },
+    {
+      "path": "CON",
+      "title": "Cloud Consultant",
+      "archetype": "The Translator",
+      "emoji": "\ud83c\udf10",
+      "accent_colour": "#14B8A6",
+      "description": "You speak two languages: business and technology. And your superpower is translating between them. Cloud Consultants and Pre-Sales Engineers help companies figure out what they need from cloud, design the right solution, and make the business case for it \u2014 all before a single line of code gets written.\n\nThis is the role for people who love variety, love people, and love solving a different puzzle every week. One day you're helping a startup architect their first cloud environment. The next, you're presenting a \u00a32 million migration plan to a FTSE 100 board. No two weeks are the same.",
+      "day_in_the_life": [
+        "Morning: Discovery call with a new prospect \u2014 understand their business, pain points, and technical landscape",
+        "Mid-morning: Build a cloud architecture proposal and pricing model for a retail client migrating from on-premises",
+        "Afternoon: Present a proof-of-concept demo to a financial services company, fielding technical questions from their CTO",
+        "Late afternoon: Write a response to an RFP (request for proposal) \u2014 positioning your cloud solution against competitors"
+      ],
+      "salary_ranges": [
+        { "level": "Junior", "uk_gbp": "\u00a340,000 - \u00a355,000", "us_usd": "$80,000 - $110,000", "remote_global": "$55,000 - $90,000" },
+        { "level": "Mid-level", "uk_gbp": "\u00a360,000 - \u00a390,000", "us_usd": "$110,000 - $150,000", "remote_global": "$80,000 - $120,000" },
+        { "level": "Senior / Pre-Sales SA", "uk_gbp": "\u00a390,000 - \u00a3130,000", "us_usd": "$150,000 - $200,000", "remote_global": "$110,000 - $170,000" },
+        { "level": "Principal / Practice Lead", "uk_gbp": "\u00a3130,000 - \u00a3180,000+", "us_usd": "$200,000 - $280,000+ (inc. bonus)", "remote_global": "$150,000 - $230,000" }
+      ],
+      "certifications": [
+        {
+          "route": "beginner",
+          "description": "No cloud experience",
+          "first_cert": {
+            "name": "AWS Cloud Practitioner",
+            "code": "CLF-C02",
+            "provider": "AWS",
+            "study_weeks": 4,
+            "exam_cost_usd": 100,
+            "why": "You need the breadth of knowledge across all services \u2014 this gives you the vocabulary"
+          },
+          "second_cert": {
+            "name": "AWS Solutions Architect Associate",
+            "code": "SAA-C03",
+            "provider": "AWS",
+            "study_weeks": 8,
+            "exam_cost_usd": 150,
+            "why": "Gives you the technical depth to back up your business conversations"
+          }
+        },
+        {
+          "route": "accelerated",
+          "description": "Consulting/sales/IT background",
+          "first_cert": {
+            "name": "AWS Solutions Architect Associate",
+            "code": "SAA-C03",
+            "provider": "AWS",
+            "study_weeks": 6,
+            "exam_cost_usd": 150,
+            "why": "Your business skills are already sharp \u2014 add the technical credibility to match"
+          },
+          "second_cert": {
+            "name": "AWS Solutions Architect Professional",
+            "code": "SAP-C02",
+            "provider": "AWS",
+            "study_weeks": 12,
+            "exam_cost_usd": 300,
+            "why": "The ultimate credibility cert for client-facing cloud roles \u2014 clients trust SAP holders"
+          }
+        }
+      ],
+      "skills": [
+        "Technical storytelling and presentation skills",
+        "Cloud economics and TCO (Total Cost of Ownership) analysis",
+        "Discovery and requirements gathering",
+        "Competitive positioning (AWS vs Azure vs GCP trade-offs)",
+        "Proposal writing and solution design at a business level"
+      ],
+      "sholas_take": "This is the path nobody talks about on LinkedIn, but it's one of the most lucrative in cloud. If you've got a sales, consulting, or client-facing background, you're sitting on a goldmine. I work with pre-sales SAs and cloud consultants at AWS every day, and the best ones aren't the most technical \u2014 they're the best communicators. They can take a complex cloud solution and explain it so a non-technical CEO gets excited about it. If that sounds like you, this path has your name on it.",
+      "cta_primary": {
+        "text": "Download the AWS Certification Roadmap 2026",
+        "url": "https://sholastechnotes.com/aws-certification-roadmap",
+        "utm_params": { "utm_source": "cloudpath-quiz", "utm_medium": "result-page", "utm_campaign": "cert-roadmap", "utm_content": "con" }
+      },
+      "cta_secondary": {
+        "text": "Subscribe to Shola's Tech Notes",
+        "url": "https://sholastechnotes.com",
+        "utm_params": { "utm_source": "cloudpath-quiz", "utm_medium": "result-page", "utm_campaign": "newsletter", "utm_content": "con" }
+      },
+      "share_text": "I took the CloudPath Quiz and got Cloud Consultant \u2014 The Translator! Which cloud career fits you?",
+      "og_description": "Your CloudPath result: Cloud Consultant. Bridge business and technology, advise companies, and earn \u00a340K-\u00a3180K+."
+    }
+  ]
+}

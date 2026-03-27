@@ -1,0 +1,285 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "text": "What's your background before cloud? (Pick the closest one)",
+      "subtext": null,
+      "answers": [
+        {
+          "id": "q1_a",
+          "text": "I come from a non-tech background — business, finance, healthcare, education, or something else entirely",
+          "scores": { "SA": 2, "CE": 0, "SEC": 0, "DML": 0, "SRE": 0, "CON": 3 }
+        },
+        {
+          "id": "q1_b",
+          "text": "I've done some IT work — helpdesk, sysadmin, networking, that sort of thing",
+          "scores": { "SA": 0, "CE": 3, "SEC": 0, "DML": 0, "SRE": 2, "CON": 0 }
+        },
+        {
+          "id": "q1_c",
+          "text": "I've got a dev background — I can code and I've built things",
+          "scores": { "SA": 0, "CE": 2, "SEC": 0, "DML": 3, "SRE": 2, "CON": 0 }
+        },
+        {
+          "id": "q1_d",
+          "text": "I work in risk, compliance, audit, or governance",
+          "scores": { "SA": 0, "CE": 0, "SEC": 3, "DML": 0, "SRE": 0, "CON": 1 }
+        },
+        {
+          "id": "q1_e",
+          "text": "I'm in data — analytics, BI, spreadsheets are my thing",
+          "scores": { "SA": 1, "CE": 0, "SEC": 0, "DML": 3, "SRE": 0, "CON": 0 }
+        },
+        {
+          "id": "q1_f",
+          "text": "Sales, consulting, or client-facing work is my world",
+          "scores": { "SA": 2, "CE": 0, "SEC": 0, "DML": 0, "SRE": 0, "CON": 3 }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "Forget job titles for a second. What kind of work actually makes you lose track of time?",
+      "subtext": null,
+      "answers": [
+        {
+          "id": "q2_a",
+          "text": "Drawing diagrams, mapping out systems, figuring out how all the pieces fit together",
+          "scores": { "SA": 3, "CE": 0, "SEC": 0, "DML": 0, "SRE": 1, "CON": 0 }
+        },
+        {
+          "id": "q2_b",
+          "text": "Building things that work — writing scripts, automating tasks, making stuff go",
+          "scores": { "SA": 0, "CE": 3, "SEC": 0, "DML": 0, "SRE": 2, "CON": 0 }
+        },
+        {
+          "id": "q2_c",
+          "text": "Finding the holes — spotting what could go wrong before it does",
+          "scores": { "SA": 0, "CE": 0, "SEC": 3, "DML": 0, "SRE": 0, "CON": 0 }
+        },
+        {
+          "id": "q2_d",
+          "text": "Making sense of messy data — turning numbers into something useful",
+          "scores": { "SA": 0, "CE": 0, "SEC": 0, "DML": 3, "SRE": 0, "CON": 0 }
+        },
+        {
+          "id": "q2_e",
+          "text": "Keeping things running smoothly — monitoring, fixing, optimising",
+          "scores": { "SA": 0, "CE": 1, "SEC": 0, "DML": 0, "SRE": 3, "CON": 0 }
+        },
+        {
+          "id": "q2_f",
+          "text": "Explaining technical things to non-technical people — being the translator",
+          "scores": { "SA": 2, "CE": 0, "SEC": 0, "DML": 0, "SRE": 0, "CON": 3 }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "You're given a massive, confusing project at work. What's your first instinct?",
+      "subtext": null,
+      "answers": [
+        {
+          "id": "q3_a",
+          "text": "Zoom out. Whiteboard the whole thing. I need to see the big picture before I touch anything",
+          "scores": { "SA": 3, "CE": 0, "SEC": 0, "DML": 0, "SRE": 0, "CON": 1 }
+        },
+        {
+          "id": "q3_b",
+          "text": "Open a terminal. Start poking around. I learn by doing, not by planning",
+          "scores": { "SA": 0, "CE": 3, "SEC": 0, "DML": 0, "SRE": 1, "CON": 0 }
+        },
+        {
+          "id": "q3_c",
+          "text": "Check what could break. I want to know the risks before we move",
+          "scores": { "SA": 0, "CE": 0, "SEC": 3, "DML": 0, "SRE": 0, "CON": 0 }
+        },
+        {
+          "id": "q3_d",
+          "text": "Find the data. I want evidence before I make any decisions",
+          "scores": { "SA": 1, "CE": 0, "SEC": 0, "DML": 3, "SRE": 0, "CON": 0 }
+        },
+        {
+          "id": "q3_e",
+          "text": "Build a process. If we do this once, we'll do it a hundred times — let's automate it",
+          "scores": { "SA": 0, "CE": 2, "SEC": 0, "DML": 0, "SRE": 3, "CON": 0 }
+        },
+        {
+          "id": "q3_f",
+          "text": "Talk to the stakeholders. What does the business actually need here?",
+          "scores": { "SA": 1, "CE": 0, "SEC": 0, "DML": 0, "SRE": 0, "CON": 3 }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "Be honest — what matters most to you in a career? (No wrong answers, I promise)",
+      "subtext": null,
+      "answers": [
+        {
+          "id": "q4_a",
+          "text": "I want to be the person everyone comes to for advice — the trusted expert",
+          "scores": { "SA": 3, "CE": 0, "SEC": 1, "DML": 0, "SRE": 0, "CON": 0 }
+        },
+        {
+          "id": "q4_b",
+          "text": "I want to build things I can point at and say 'I made that work'",
+          "scores": { "SA": 0, "CE": 3, "SEC": 0, "DML": 0, "SRE": 1, "CON": 0 }
+        },
+        {
+          "id": "q4_c",
+          "text": "Stability and demand — I want skills that will always be needed",
+          "scores": { "SA": 0, "CE": 0, "SEC": 3, "DML": 0, "SRE": 2, "CON": 0 }
+        },
+        {
+          "id": "q4_d",
+          "text": "I want to work with cutting-edge tech — AI, machine learning, the future stuff",
+          "scores": { "SA": 0, "CE": 0, "SEC": 0, "DML": 3, "SRE": 0, "CON": 0 }
+        },
+        {
+          "id": "q4_e",
+          "text": "Variety — I'd go mad doing the same thing every day",
+          "scores": { "SA": 1, "CE": 0, "SEC": 0, "DML": 0, "SRE": 0, "CON": 3 }
+        },
+        {
+          "id": "q4_f",
+          "text": "Earning potential — let's be real, I want to maximise my income",
+          "scores": { "SA": 2, "CE": 0, "SEC": 0, "DML": 1, "SRE": 0, "CON": 2 }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "Let's talk about code. Which of these is most you?",
+      "subtext": null,
+      "answers": [
+        {
+          "id": "q5_a",
+          "text": "I can read code and understand it, but I'd rather design the system than write the code",
+          "scores": { "SA": 3, "CE": 0, "SEC": 0, "DML": 0, "SRE": 0, "CON": 1 }
+        },
+        {
+          "id": "q5_b",
+          "text": "I love it. Give me a terminal and leave me alone for a few hours",
+          "scores": { "SA": 0, "CE": 3, "SEC": 0, "DML": 2, "SRE": 2, "CON": 0 }
+        },
+        {
+          "id": "q5_c",
+          "text": "I'll write scripts when I need to, but it's a tool, not a passion",
+          "scores": { "SA": 0, "CE": 0, "SEC": 2, "DML": 0, "SRE": 2, "CON": 1 }
+        },
+        {
+          "id": "q5_d",
+          "text": "Python and SQL are my happy place — especially when there's data involved",
+          "scores": { "SA": 0, "CE": 0, "SEC": 0, "DML": 3, "SRE": 0, "CON": 0 }
+        },
+        {
+          "id": "q5_e",
+          "text": "Honestly? I'd prefer to avoid it. I'm more of a people/process person",
+          "scores": { "SA": 1, "CE": 0, "SEC": 0, "DML": 0, "SRE": 0, "CON": 3 }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "Your ideal Tuesday at work looks like...",
+      "subtext": null,
+      "answers": [
+        {
+          "id": "q6_a",
+          "text": "A mix of meetings and solo work — morning on a design doc, afternoon in a workshop with the team",
+          "scores": { "SA": 3, "CE": 0, "SEC": 0, "DML": 0, "SRE": 0, "CON": 0 }
+        },
+        {
+          "id": "q6_b",
+          "text": "Deep focus all day. Headphones on. Building and debugging in peace",
+          "scores": { "SA": 0, "CE": 3, "SEC": 0, "DML": 2, "SRE": 2, "CON": 0 }
+        },
+        {
+          "id": "q6_c",
+          "text": "Investigating something — reviewing logs, running tests, hunting for issues",
+          "scores": { "SA": 0, "CE": 0, "SEC": 3, "DML": 0, "SRE": 1, "CON": 0 }
+        },
+        {
+          "id": "q6_d",
+          "text": "Back-to-back calls with different clients — every conversation is a new puzzle",
+          "scores": { "SA": 0, "CE": 0, "SEC": 0, "DML": 0, "SRE": 0, "CON": 3 }
+        },
+        {
+          "id": "q6_e",
+          "text": "Automating something tedious so nobody has to do it manually again",
+          "scores": { "SA": 0, "CE": 2, "SEC": 0, "DML": 0, "SRE": 3, "CON": 0 }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "text": "Pick the day that sounds most like your dream job (even if it sounds unrealistic right now)",
+      "subtext": null,
+      "answers": [
+        {
+          "id": "q7_a",
+          "text": "You spend the morning designing a cloud architecture for a bank's new app. After lunch, you present it to their CTO and explain why your design handles 10 million users. They say 'brilliant, let's do it.'",
+          "scores": { "SA": 3, "CE": 0, "SEC": 0, "DML": 0, "SRE": 0, "CON": 0 }
+        },
+        {
+          "id": "q7_b",
+          "text": "You wake up, check your CI/CD pipeline ran clean overnight. You spend the day building infrastructure-as-code for a new microservice. By 5pm, it's deployed to production. Satisfying.",
+          "scores": { "SA": 0, "CE": 3, "SEC": 0, "DML": 0, "SRE": 0, "CON": 0 }
+        },
+        {
+          "id": "q7_c",
+          "text": "A company got breached last week. You're brought in to review their cloud setup, find the gaps, and redesign their security posture. You present 15 findings. They're shocked. You fix them all.",
+          "scores": { "SA": 0, "CE": 0, "SEC": 3, "DML": 0, "SRE": 0, "CON": 0 }
+        },
+        {
+          "id": "q7_d",
+          "text": "You've got a massive dataset from IoT sensors across 50 factories. You build a pipeline that cleans, transforms, and loads it into a dashboard. The operations team can now predict machine failures before they happen.",
+          "scores": { "SA": 0, "CE": 0, "SEC": 0, "DML": 3, "SRE": 0, "CON": 0 }
+        },
+        {
+          "id": "q7_e",
+          "text": "Your team's platform serves 200 developers. Today you're fine-tuning auto-scaling, setting up better alerting, and reducing cloud costs by 30%. Everything runs smoother because of you.",
+          "scores": { "SA": 0, "CE": 0, "SEC": 0, "DML": 0, "SRE": 3, "CON": 0 }
+        },
+        {
+          "id": "q7_f",
+          "text": "You're on a call with a startup founder who's panicking about their cloud bill. You walk them through a new architecture, save them \u00a340K a year, and they sign a 12-month contract on the spot.",
+          "scores": { "SA": 0, "CE": 0, "SEC": 0, "DML": 0, "SRE": 0, "CON": 3 }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "text": "When you're learning something new, what works best for you?",
+      "subtext": null,
+      "answers": [
+        {
+          "id": "q8_a",
+          "text": "Show me the big picture first — I need to understand WHY before I learn HOW",
+          "scores": { "SA": 2, "CE": 0, "SEC": 0, "DML": 0, "SRE": 0, "CON": 2 }
+        },
+        {
+          "id": "q8_b",
+          "text": "Hands-on labs. Don't give me theory — give me a terminal and a problem to solve",
+          "scores": { "SA": 0, "CE": 3, "SEC": 0, "DML": 0, "SRE": 2, "CON": 0 }
+        },
+        {
+          "id": "q8_c",
+          "text": "Case studies and real incidents — I learn best from what went wrong",
+          "scores": { "SA": 0, "CE": 0, "SEC": 3, "DML": 0, "SRE": 0, "CON": 0 }
+        },
+        {
+          "id": "q8_d",
+          "text": "Give me a dataset and a question. I'll figure out the tools along the way",
+          "scores": { "SA": 0, "CE": 0, "SEC": 0, "DML": 3, "SRE": 0, "CON": 0 }
+        },
+        {
+          "id": "q8_e",
+          "text": "Documentation and runbooks. I want the systematic, step-by-step approach",
+          "scores": { "SA": 0, "CE": 1, "SEC": 1, "DML": 0, "SRE": 2, "CON": 0 }
+        }
+      ]
+    }
+  ]
+}

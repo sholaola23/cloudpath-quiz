@@ -1,26 +1,85 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* ============================================================
+   CloudPath Quiz — Signal Gravity Theme (Tailwind v4)
+   ============================================================ */
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Backgrounds */
+  --color-bg-primary: #0A0A0A;
+  --color-bg-card: #111111;
+  --color-bg-hover: #1A1A1A;
+  --color-bg-border: #1F1F1F;
+
+  /* Text */
+  --color-text-primary: #FFFFFF;
+  --color-text-body: #A1A1AA;
+  --color-text-muted: #71717A;
+
+  /* Path accent colours */
+  --color-accent-sa: #3B82F6;
+  --color-accent-ce: #10B981;
+  --color-accent-sec: #EF4444;
+  --color-accent-dml: #8B5CF6;
+  --color-accent-sre: #F59E0B;
+  --color-accent-con: #06B6D4;
+
+  /* Font */
+  --font-sans: var(--font-inter), "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  /* Animations */
+  --animate-pulse-slow: pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-fade-in: fade-in 0.5s ease-out forwards;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Dark mode always on — this is a dark-only site */
+:root {
+  --background: #0A0A0A;
+  --foreground: #FFFFFF;
+  color-scheme: dark;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0A0A0A;
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom keyframes */
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection colour */
+::selection {
+  background-color: rgba(59, 130, 246, 0.3);
+  color: #FFFFFF;
+}
+
+/* Focus ring for accessibility */
+:focus-visible {
+  outline: 2px solid #3B82F6;
+  outline-offset: 2px;
+}
+
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
