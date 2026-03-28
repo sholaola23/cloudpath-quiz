@@ -81,6 +81,10 @@ export async function subscribeToNewsletter(
               name: "first_name",
               value: firstName,
             },
+            {
+              name: "source_product",
+              value: "cloudpath",
+            },
           ],
         }),
       }
