@@ -56,6 +56,7 @@ export async function subscribeToNewsletter(
       tags.push(resultTag);
     }
 
+    // Step 1: Create/reactivate subscriber
     const response = await fetch(
       `https://api.beehiiv.com/v2/publications/${publicationId}/subscriptions`,
       {
@@ -77,7 +78,6 @@ export async function subscribeToNewsletter(
               value: firstName,
             },
           ],
-          tags,
         }),
       }
     );
@@ -92,10 +92,34 @@ export async function subscribeToNewsletter(
     }
 
     const data = await response.json();
+    const subscriberId = data.data?.id;
+
+    // Step 2: Add tags via separate API call
+    // Beehiiv ignores tags in the create subscription body — must use PUT endpoint
+    if (subscriberId) {
+      try {
+        const tagResponse = await fetch(
+          `https://api.beehiiv.com/v2/publications/${publicationId}/subscriptions/${subscriberId}/tags`,
+          {
+            method: "PUT",
+            headers: {
+              Authorization: `Bearer ${apiKey}`,
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ tags }),
+          }
+        );
+        if (!tagResponse.ok) {
+          console.error("Beehiiv tag error:", await tagResponse.text());
+        }
+      } catch (tagErr) {
+        console.error("Beehiiv tag error:", tagErr);
+      }
+    }
 
     return {
       success: true,
-      subscriberId: data.data?.id,
+      subscriberId,
       alreadySubscribed: data.data?.status === "active",
     };
   } catch (error) {
