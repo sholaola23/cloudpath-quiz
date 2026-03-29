@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import questionsData from "@/data/questions.json";
 import { calculateScores } from "@/lib/scoring";
 import type { QuizQuestion as QuizQuestionType } from "@/lib/types";
@@ -106,9 +107,21 @@ export default function QuizPage() {
 
   return (
     <div className="min-h-screen bg-bg-primary flex flex-col">
+      {/* Top bar — exit link */}
+      {phase === "quiz" && (
+        <div className="flex justify-start px-6 pt-4">
+          <Link
+            href="/"
+            className="text-text-muted text-sm hover:text-text-primary transition-colors duration-200"
+          >
+            ← Back to home
+          </Link>
+        </div>
+      )}
+
       {/* Progress bar — only visible during quiz phase */}
       {phase === "quiz" && (
-        <div className="px-6 pt-6 pb-2 max-w-2xl mx-auto w-full">
+        <div className="px-6 pt-2 pb-2 max-w-2xl mx-auto w-full">
           <ProgressBar
             currentQuestion={currentQuestion}
             totalQuestions={TOTAL_QUESTIONS}
