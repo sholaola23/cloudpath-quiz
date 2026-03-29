@@ -8,23 +8,34 @@ interface QuizQuestionProps {
   question: QuizQuestionType;
   onAnswer: (answerId: string) => void;
   questionIndex: number;
+  totalQuestions: number;
+  selectedAnswer?: string | null;
+  onPrevious?: () => void;
+  onNext?: () => void;
 }
 
 export default function QuizQuestion({
   question,
   onAnswer,
   questionIndex,
+  selectedAnswer,
+  onPrevious,
+  onNext,
 }: QuizQuestionProps) {
-  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [selectedId, setSelectedId] = useState<string | null>(
+    selectedAnswer ?? null
+  );
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const handleSelect = (answerId: string) => {
-    if (selectedId) return; // Prevent double-tap
+    if (isAnimating) return;
+    setIsAnimating(true);
     setSelectedId(answerId);
 
     // Brief delay for the animation to play before transitioning
     setTimeout(() => {
       onAnswer(answerId);
-      setSelectedId(null);
+      setIsAnimating(false);
     }, 300);
   };
 
@@ -60,7 +71,7 @@ export default function QuizQuestion({
               <motion.button
                 key={answer.id}
                 onClick={() => handleSelect(answer.id)}
-                disabled={selectedId !== null}
+                disabled={isAnimating}
                 whileTap={{ scale: 0.97 }}
                 animate={
                   isSelected
@@ -88,6 +99,30 @@ export default function QuizQuestion({
             );
           })}
         </div>
+
+        {/* Previous / Next navigation */}
+        {(onPrevious || onNext) && (
+          <div className="flex justify-between mt-6">
+            {onPrevious ? (
+              <button
+                onClick={onPrevious}
+                className="px-5 py-2.5 rounded-lg text-sm font-medium text-text-muted border border-bg-border hover:bg-bg-hover hover:text-text-primary transition-all duration-200"
+              >
+                ← Previous
+              </button>
+            ) : (
+              <div />
+            )}
+            {onNext && (
+              <button
+                onClick={onNext}
+                className="px-5 py-2.5 rounded-lg text-sm font-medium text-text-primary bg-bg-card border border-bg-border hover:bg-bg-hover transition-all duration-200"
+              >
+                Next →
+              </button>
+            )}
+          </div>
+        )}
       </motion.div>
     </AnimatePresence>
   );

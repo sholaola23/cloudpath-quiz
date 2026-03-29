@@ -23,7 +23,8 @@ export default function QuizPage() {
 
   const handleAnswer = useCallback(
     (answerId: string) => {
-      const newAnswers = [...answers, answerId];
+      const newAnswers = [...answers];
+      newAnswers[currentQuestion] = answerId;
       setAnswers(newAnswers);
 
       if (currentQuestion < TOTAL_QUESTIONS - 1) {
@@ -35,6 +36,18 @@ export default function QuizPage() {
     },
     [answers, currentQuestion]
   );
+
+  const handlePrevious = useCallback(() => {
+    setCurrentQuestion((prev) => prev - 1);
+  }, []);
+
+  const handleNext = useCallback(() => {
+    if (currentQuestion < TOTAL_QUESTIONS - 1) {
+      setCurrentQuestion((prev) => prev + 1);
+    } else {
+      setPhase("email");
+    }
+  }, [currentQuestion]);
 
   const handleEmailSubmit = useCallback(
     async (firstName: string, email: string) => {
@@ -111,6 +124,10 @@ export default function QuizPage() {
             question={questions[currentQuestion]}
             onAnswer={handleAnswer}
             questionIndex={currentQuestion}
+            totalQuestions={TOTAL_QUESTIONS}
+            selectedAnswer={answers[currentQuestion] ?? null}
+            onPrevious={currentQuestion > 0 ? handlePrevious : undefined}
+            onNext={answers[currentQuestion] != null ? handleNext : undefined}
           />
         )}
 
