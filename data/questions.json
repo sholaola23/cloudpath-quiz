@@ -40,7 +40,7 @@
     {
       "id": 2,
       "text": "Forget job titles for a second. What kind of work actually makes you lose track of time?",
-      "subtext": null,
+      "subtext": "Pick the one that resonates most — there are no wrong answers",
       "answers": [
         {
           "id": "q2_a",
@@ -77,7 +77,7 @@
     {
       "id": 3,
       "text": "You're given a massive, confusing project at work. What's your first instinct?",
-      "subtext": null,
+      "subtext": "Go with your gut — what do you do before anything else?",
       "answers": [
         {
           "id": "q3_a",
@@ -114,7 +114,7 @@
     {
       "id": 4,
       "text": "Be honest — what matters most to you in a career? (No wrong answers, I promise)",
-      "subtext": null,
+      "subtext": "If a few of these feel true, pick the one you'd choose if you could only have one",
       "answers": [
         {
           "id": "q4_a",
@@ -151,7 +151,7 @@
     {
       "id": 5,
       "text": "Let's talk about code. Which of these is most you?",
-      "subtext": null,
+      "subtext": "Be honest — there's a great cloud career for every answer here",
       "answers": [
         {
           "id": "q5_a",
@@ -183,7 +183,7 @@
     {
       "id": 6,
       "text": "Your ideal Tuesday at work looks like...",
-      "subtext": null,
+      "subtext": "Pick the day that sounds most like you, not what you think you should pick",
       "answers": [
         {
           "id": "q6_a",
@@ -215,7 +215,7 @@
     {
       "id": 7,
       "text": "Pick the day that sounds most like your dream job (even if it sounds unrealistic right now)",
-      "subtext": null,
+      "subtext": "Read each one — one of them will make you think 'that sounds amazing'",
       "answers": [
         {
           "id": "q7_a",
@@ -252,7 +252,7 @@
     {
       "id": 8,
       "text": "When you're learning something new, what works best for you?",
-      "subtext": null,
+      "subtext": "Last one — pick the learning style that feels most natural to you",
       "answers": [
         {
           "id": "q8_a",
