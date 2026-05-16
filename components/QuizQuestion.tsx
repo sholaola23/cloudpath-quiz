@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import type { QuizQuestion as QuizQuestionType } from "@/lib/types";
 import { trackQuestionComplete } from "@/lib/analytics";
 
@@ -61,15 +61,12 @@ export default function QuizQuestion({
   const atCap = selected.length >= maxSelect;
 
   return (
-    <AnimatePresence mode="wait">
-      <motion.div
-        key={questionIndex}
-        initial={{ opacity: 0, x: 40 }}
-        animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: -40 }}
-        transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="w-full max-w-2xl mx-auto"
-      >
+    <motion.div
+      initial={{ opacity: 0, x: 40 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
+      className="w-full max-w-2xl mx-auto"
+    >
         <h2 className="text-2xl sm:text-3xl font-bold text-text-primary text-center leading-tight mb-3">
           {question.text}
         </h2>
@@ -179,7 +176,6 @@ export default function QuizQuestion({
             )
           )}
         </div>
-      </motion.div>
-    </AnimatePresence>
+    </motion.div>
   );
 }

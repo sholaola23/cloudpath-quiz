@@ -216,6 +216,7 @@ export default function QuizPage() {
       <div className="flex-1 flex items-center justify-center px-6 py-8">
         {phase === "quiz" && (
           <QuizQuestion
+            key={currentQuestion}
             question={questions[currentQuestion]}
             onAnswer={handleAnswer}
             questionIndex={currentQuestion}
