@@ -17,6 +17,9 @@ export interface QuizQuestion {
   id: number;
   text: string;
   subtext: string | null;
+  /** Max answers selectable. Omitted/1 = single-select (auto-advance).
+   *  >1 = optional multi-select (e.g. 2) with a Continue button. */
+  maxSelect?: number;
   answers: QuizAnswer[];
 }
 

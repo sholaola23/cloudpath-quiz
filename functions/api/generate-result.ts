@@ -66,10 +66,15 @@ function buildUserPrompt(
   firstName: string,
   scores: Record<string, number>
 ): string {
+  // A question may have 1–2 selected answers (multi-select). Join
+  // them so Claude sees BOTH, never just the last-clicked one.
   const answerTexts: Record<string, string> = {};
   for (const answerId of answerIds) {
     const qNum = answerId.split("_")[0];
-    answerTexts[qNum] = getAnswerText(answerId);
+    const text = getAnswerText(answerId);
+    answerTexts[qNum] = answerTexts[qNum]
+      ? `${answerTexts[qNum]}; also: ${text}`
+      : text;
   }
 
   const scoreBreakdown = Object.entries(scores)

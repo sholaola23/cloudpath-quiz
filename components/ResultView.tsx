@@ -10,11 +10,15 @@ import SalaryRange from "@/components/SalaryRange";
 import CertBadge from "@/components/CertBadge";
 import ShareBadge from "@/components/ShareBadge";
 
-// Read sessionStorage without triggering the setState-in-effect lint rule
-function useSessionStorageValue(key: string): string | null {
+// Read web storage without triggering the setState-in-effect lint rule
+function useStorageValue(
+  store: "session" | "local",
+  key: string
+): string | null {
   return useSyncExternalStore(
     () => () => {},
-    () => sessionStorage.getItem(key),
+    () =>
+      (store === "session" ? sessionStorage : localStorage).getItem(key),
     () => null
   );
 }
@@ -22,22 +26,33 @@ function useSessionStorageValue(key: string): string | null {
 export default function ResultView({ path }: { path: string }) {
   const upperPath = path.toUpperCase();
 
-  const storedPersonalisedText = useSessionStorageValue(
-    "cloudpath_personalised"
+  // Fresh-from-quiz: sessionStorage (only valid if its path matches).
+  const sessionText = useStorageValue("session", "cloudpath_personalised");
+  const sessionPath = useStorageValue("session", "cloudpath_result_path");
+  const sessionName = useStorageValue("session", "cloudpath_name");
+
+  // Revisit / reopened tab: localStorage keyed by THIS path.
+  const localText = useStorageValue(
+    "local",
+    `cloudpath_personalised_${upperPath}`
   );
-  const storedResultPath = useSessionStorageValue("cloudpath_result_path");
-  const firstName = useSessionStorageValue("cloudpath_name") ?? "";
+  const localName = useStorageValue("local", `cloudpath_name_${upperPath}`);
 
   useEffect(() => {
     trackResultView(upperPath);
   }, [upperPath]);
 
-  // Only show personalised text if the stored path matches this page's
-  // path (prevents stale text on shared/bookmarked result URLs)
+  // Session text only counts if it belongs to this path (prevents
+  // stale text on shared/bookmarked URLs); otherwise fall back to the
+  // path-keyed localStorage copy so the owner still sees their result.
   const personalisedText =
-    storedResultPath?.toUpperCase() === upperPath
-      ? storedPersonalisedText
-      : null;
+    sessionPath?.toUpperCase() === upperPath
+      ? sessionText ?? localText
+      : localText;
+  const firstName =
+    (sessionPath?.toUpperCase() === upperPath ? sessionName : null) ??
+    localName ??
+    "";
 
   const result = resultsData.results.find((r) => r.path === upperPath) as
     | ResultData
@@ -277,11 +292,29 @@ export default function ResultView({ path }: { path: string }) {
           </blockquote>
         </motion.section>
 
-        {/* SECTION 9: CTAs */}
+        {/* SECTION 9: Share — placed BEFORE the CTAs (which open in
+            new tabs and take the user away) so the share prompt lands
+            while engagement/dopamine is highest. Distribution lever. */}
         <motion.section
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.5 }}
+          className="mb-12"
+        >
+          <h2 className="text-xl sm:text-2xl font-bold text-text-primary mb-2">
+            Know someone figuring out their cloud path?
+          </h2>
+          <p className="text-text-muted text-sm mb-5">
+            Send them this — it takes 3 minutes and might save them months.
+          </p>
+          <ShareBadge result={result as ResultData} />
+        </motion.section>
+
+        {/* SECTION 10: CTAs */}
+        <motion.section
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.55 }}
           className="mb-12"
         >
           <div className="flex flex-col gap-3">
@@ -304,19 +337,6 @@ export default function ResultView({ path }: { path: string }) {
               {result.cta_secondary.text}
             </a>
           </div>
-        </motion.section>
-
-        {/* SECTION 10: Share */}
-        <motion.section
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.55 }}
-          className="mb-12"
-        >
-          <h2 className="text-xl sm:text-2xl font-bold text-text-primary mb-5">
-            Share Your Result
-          </h2>
-          <ShareBadge result={result as ResultData} />
         </motion.section>
 
         {/* FOOTER */}

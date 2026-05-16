@@ -97,10 +97,15 @@ function buildUserPrompt(
   scores: Record<ResultPath, number>
 ): string {
   // Map answer IDs to their text
+  // A question may have 1–2 selected answers (multi-select). Join them
+  // so Claude sees both, not just the last one.
   const answerTexts: Record<string, string> = {};
   for (const answerId of answerIds) {
     const qNum = answerId.split("_")[0]; // "q1" from "q1_a"
-    answerTexts[qNum] = getAnswerText(answerId) ?? "Unknown";
+    const text = getAnswerText(answerId) ?? "Unknown";
+    answerTexts[qNum] = answerTexts[qNum]
+      ? `${answerTexts[qNum]}; also: ${text}`
+      : text;
   }
 
   // Build score breakdown string

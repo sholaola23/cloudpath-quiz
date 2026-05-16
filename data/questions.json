@@ -40,7 +40,8 @@
     {
       "id": 2,
       "text": "Forget job titles for a second. What kind of work actually makes you lose track of time?",
-      "subtext": "Pick the one that resonates most — there are no wrong answers",
+      "subtext": "Pick 1 — or 2 if you're genuinely torn",
+      "maxSelect": 2,
       "answers": [
         {
           "id": "q2_a",
@@ -77,7 +78,8 @@
     {
       "id": 3,
       "text": "You're given a massive, confusing project at work. What's your first instinct?",
-      "subtext": "Go with your gut — what do you do before anything else?",
+      "subtext": "Go with your gut — pick 1, or 2 if you genuinely do both",
+      "maxSelect": 2,
       "answers": [
         {
           "id": "q3_a",
@@ -114,7 +116,8 @@
     {
       "id": 4,
       "text": "Be honest — what matters most to you in a career? (No wrong answers, I promise)",
-      "subtext": "If a few of these feel true, pick the one you'd choose if you could only have one",
+      "subtext": "If a few feel true, pick your top 1 — or 2",
+      "maxSelect": 2,
       "answers": [
         {
           "id": "q4_a",
@@ -183,7 +186,8 @@
     {
       "id": 6,
       "text": "Your ideal Tuesday at work looks like...",
-      "subtext": "Pick the day that sounds most like you, not what you think you should pick",
+      "subtext": "Pick 1 — or 2 if two of these sound equally like you",
+      "maxSelect": 2,
       "answers": [
         {
           "id": "q6_a",

@@ -1,0 +1,15 @@
+{
+  // Cloudflare Pages config. Bindings here apply to the Pages
+  // Functions in ./functions on `wrangler pages deploy`.
+  "name": "cloudpath-quiz",
+  "compatibility_date": "2025-05-01",
+  "pages_build_output_dir": "out",
+  "kv_namespaces": [
+    {
+      // Durable lead backup: if Beehiiv subscribe fails after retry,
+      // the lead is written here so it is never lost on a viral spike.
+      "binding": "LEADS_KV",
+      "id": "dcb8c566357e4ed4abe1f2f5efb8564e"
+    }
+  ]
+}
