@@ -1,0 +1,12 @@
+# Cloudflare Pages headers.
+# Next's per-path OG images are emitted as extensionless files
+# (e.g. /result/SA/opengraph-image). Without this, Cloudflare serves
+# them as application/octet-stream and LinkedIn/X/Facebook refuse to
+# render the share preview. Force the correct image content type.
+/result/*/opengraph-image
+  Content-Type: image/png
+  Cache-Control: public, max-age=3600, s-maxage=86400
+
+# Static OG fallback
+/images/og-default.png
+  Cache-Control: public, max-age=86400

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { ResultData } from "@/lib/types";
+import { trackShareClick } from "@/lib/analytics";
 
 interface ShareBadgeProps {
   result: ResultData;
@@ -11,12 +12,13 @@ export default function ShareBadge({ result }: ShareBadgeProps) {
   const [copied, setCopied] = useState(false);
 
   const quizUrl = typeof window !== "undefined"
-    ? `${window.location.origin}/result?path=${result.path}`
-    : `https://cloudpath.sholastechnotes.com/result?path=${result.path}`;
+    ? `${window.location.origin}/result/${result.path}`
+    : `https://cloudpath.sholastechnotes.com/result/${result.path}`;
 
   const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(quizUrl)}&summary=${encodeURIComponent(result.share_text)}`;
 
   const handleCopyLink = async () => {
+    trackShareClick(result.path, "copy_link");
     try {
       await navigator.clipboard.writeText(
         `${result.share_text}\n\n${quizUrl}`
@@ -71,6 +73,7 @@ export default function ShareBadge({ result }: ShareBadgeProps) {
         href={linkedInUrl}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() => trackShareClick(result.path, "linkedin")}
         className="
           flex-1 flex items-center justify-center gap-2
           px-5 py-3 rounded-xl

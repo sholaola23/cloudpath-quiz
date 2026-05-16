@@ -58,6 +58,17 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} h-full`}>
       <body className="min-h-full flex flex-col bg-bg-primary text-text-primary antialiased">
         {children}
+        {/* Cloudflare Web Analytics — privacy-first, cookieless, no PII.
+            Inert until NEXT_PUBLIC_CF_BEACON_TOKEN is set (create a site
+            at dash.cloudflare.com → Web Analytics, paste the token into
+            the Cloudflare Pages env var, redeploy). */}
+        {process.env.NEXT_PUBLIC_CF_BEACON_TOKEN && (
+          <script
+            defer
+            src="https://static.cloudflareinsights.com/beacon.min.js"
+            data-cf-beacon={`{"token": "${process.env.NEXT_PUBLIC_CF_BEACON_TOKEN}"}`}
+          />
+        )}
       </body>
     </html>
   );

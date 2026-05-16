@@ -1,10 +1,15 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import questionsData from "@/data/questions.json";
 import { calculateScores } from "@/lib/scoring";
+import {
+  trackQuizStart,
+  trackEmailGateView,
+  trackEmailSubmit,
+} from "@/lib/analytics";
 import type { QuizQuestion as QuizQuestionType } from "@/lib/types";
 import ProgressBar from "@/components/ProgressBar";
 import QuizQuestion from "@/components/QuizQuestion";
@@ -21,6 +26,14 @@ export default function QuizPage() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<string[]>([]);
   const [phase, setPhase] = useState<Phase>("quiz");
+
+  useEffect(() => {
+    trackQuizStart();
+  }, []);
+
+  useEffect(() => {
+    if (phase === "email") trackEmailGateView();
+  }, [phase]);
 
   const handleAnswer = useCallback(
     (answerId: string) => {
@@ -52,6 +65,7 @@ export default function QuizPage() {
 
   const handleEmailSubmit = useCallback(
     async (firstName: string, email: string) => {
+      trackEmailSubmit();
       setPhase("loading");
 
       // Calculate scores
@@ -99,8 +113,8 @@ export default function QuizPage() {
       sessionStorage.setItem("cloudpath_name", firstName);
       sessionStorage.setItem("cloudpath_result_path", winner);
 
-      // Navigate to result
-      router.push(`/result?path=${winner}`);
+      // Navigate to result (per-path route for OG/social sharing)
+      router.push(`/result/${winner}`);
     },
     [answers, router]
   );

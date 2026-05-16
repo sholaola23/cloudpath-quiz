@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CloudPath Quiz
 
-## Getting Started
+"Which Cloud Career Fits You?" — an 8-question quiz that maps people to one
+of 6 cloud career paths, personalises the result with Claude, and subscribes
+them to *Shola's Tech Notes*. Top-of-funnel lead magnet for the newsletter.
 
-First, run the development server:
+## Stack
+
+- **Next.js 16** (App Router) — exported as a **static site** (`output: "export"`)
+- **Cloudflare Pages** — hosting at `cloudpath.sholastechnotes.com`
+- **Cloudflare Pages Functions** (`functions/api/*`) — the dynamic endpoints,
+  because a static export cannot run Next.js API routes
+- **Beehiiv** — newsletter subscribe + result-based tagging
+- **Anthropic Claude** (`claude-haiku-4-5`) — personalised result paragraph
+- **Cloudflare Web Analytics** + first-party funnel events (`/api/track`)
+
+> ⚠️ The site is static. `app/api/*` routes are inert in production — the
+> live endpoints are the Pages Functions in `functions/api/`. Keep the two
+> in sync (or treat `functions/api/*` as the source of truth for prod).
+
+## Local dev
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+bun install
+bun run dev          # Next API routes work here (dev only)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Build & deploy
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+bun run build                                   # produces ./out + static OG images
+wrangler pages deploy out --project-name=cloudpath-quiz
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Pages Functions in `./functions` are picked up automatically by `wrangler`.
 
-## Learn More
+## Environment variables
 
-To learn more about Next.js, take a look at the following resources:
+Set on the **Cloudflare Pages project** (Settings → Environment variables),
+not just `.env.local`:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Var | Used by | Required |
+|-----|---------|----------|
+| `ANTHROPIC_API_KEY` | `functions/api/generate-result` | yes |
+| `BEEHIIV_API_KEY` | `functions/api/subscribe` | yes |
+| `BEEHIIV_PUBLICATION_ID` | `functions/api/subscribe` | yes |
+| `RESEND_API_KEY` | lead backup if Beehiiv fails | optional |
+| `LEAD_BACKUP_EMAIL` | where lost-lead alerts go | optional |
+| `NEXT_PUBLIC_CF_BEACON_TOKEN` | Cloudflare Web Analytics beacon | optional |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Content
 
-## Deploy on Vercel
+All quiz content is data-driven — edit JSON, no code changes:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `data/questions.json` — questions + per-answer path scores
+- `data/results.json` — the 6 result pages (copy, salary, certs, CTAs, OG)
+- `data/prompts.json` — Claude system + user prompt templates
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Routes
+
+- `/` — landing
+- `/quiz` — quiz + email gate
+- `/result/[path]` — per-path result (own OG image + metadata for sharing)
+- `/result?path=XX` — legacy, client-redirects to `/result/XX`

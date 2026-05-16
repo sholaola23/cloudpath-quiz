@@ -60,7 +60,7 @@ export async function generatePersonalisedText(
     );
 
     const message = await getAnthropicClient().messages.create({
-      model: "claude-3-haiku-20240307",
+      model: "claude-haiku-4-5",
       max_tokens: prompt.max_tokens,
       temperature: prompt.temperature,
       system: prompt.system_prompt,

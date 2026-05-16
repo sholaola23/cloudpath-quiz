@@ -45,7 +45,7 @@ export default function PrivacyPage() {
             <ul className="list-disc list-inside space-y-1">
               <li><strong>Beehiiv</strong> — newsletter platform (stores your email and name)</li>
               <li><strong>Anthropic (Claude)</strong> — AI result generation (receives anonymised quiz answers only)</li>
-              <li><strong>Vercel</strong> — hosting and analytics</li>
+              <li><strong>Cloudflare</strong> — hosting and privacy-first, cookieless web analytics</li>
             </ul>
           </div>
 
@@ -64,7 +64,8 @@ export default function PrivacyPage() {
             <h2 className="text-lg font-semibold text-white mb-2">Cookies</h2>
             <p>
               This site uses sessionStorage (not cookies) to store your quiz progress temporarily.
-              No tracking cookies are used. Vercel Analytics may collect anonymous usage data.
+              No tracking cookies are used. Cloudflare Web Analytics may collect anonymous,
+              aggregated usage data (no cookies, no fingerprinting, no personal data).
             </p>
           </div>
 

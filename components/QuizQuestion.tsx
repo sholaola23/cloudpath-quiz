@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import type { QuizQuestion as QuizQuestionType } from "@/lib/types";
+import { trackQuestionComplete } from "@/lib/analytics";
 
 interface QuizQuestionProps {
   question: QuizQuestionType;
@@ -31,6 +32,8 @@ export default function QuizQuestion({
     if (isAnimating) return;
     setIsAnimating(true);
     setSelectedId(answerId);
+
+    trackQuestionComplete(questionIndex + 1);
 
     // Brief delay for the animation to play before transitioning
     setTimeout(() => {
